@@ -41,9 +41,9 @@ cd MerchantProductManagementSystem
 2. Configure Application Properties
    server.port=8080
 
-spring.datasource.url=jdbc:mysql://localhost:3306/merchant_product_db
+spring.datasource.url=jdbc:mysql://localhost:3306/aspireqtechass
 spring.datasource.username=root
-spring.datasource.password=your_password
+spring.datasource.password=sanket
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 spring.jpa.hibernate.ddl-auto=update
