@@ -58,7 +58,7 @@ Base URL
 http://localhost:8080/api/v1/merchant/products
 
 🔐 Required Header (MANDATORY)
-X-Merchant-id: MERCHANT123
+X-Merchant-id: 101,102
 
 📌 API Endpoints (From Your Controller)
 1️⃣ Create Product
@@ -70,7 +70,7 @@ POST /api/v1/merchant/products
 cURL
 curl -X POST http://localhost:8080/api/v1/merchant/products \
 -H "Content-Type: application/json" \
--H "X-Merchant-id: MERCHANT123" \
+-H "X-Merchant-id: 101" \
 -d '{
 "name": "Laptop",
 "description": "Gaming Laptop",
@@ -86,7 +86,7 @@ GET /api/v1/merchant/products/{productId}
 
 cURL
 curl -X GET http://localhost:8080/api/v1/merchant/products/1 \
--H "X-Merchant-id: MERCHANT123"
+-H "X-Merchant-id: 101"
 
 3️⃣ Get All Products (With Pagination)
 
@@ -96,11 +96,11 @@ GET /api/v1/merchant/products?page=0&size=5
 
 cURL (Default pagination)
 curl -X GET "http://localhost:8080/api/v1/merchant/products" \
--H "X-Merchant-id: MERCHANT123"
+-H "X-Merchant-id: 101"
 
 cURL (Custom pagination)
 curl -X GET "http://localhost:8080/api/v1/merchant/products?page=1&size=10" \
--H "X-Merchant-id: MERCHANT123"
+-H "X-Merchant-id: 102"
 
 4️⃣ Update Product
 
@@ -111,7 +111,7 @@ PUT /api/v1/merchant/products/{productId}
 cURL
 curl -X PUT http://localhost:8080/api/v1/merchant/products/1 \
 -H "Content-Type: application/json" \
--H "X-Merchant-id: MERCHANT123" \
+-H "X-Merchant-id: 101" \
 -d '{
 "name": "Updated Laptop",
 "description": "High performance laptop",
@@ -127,4 +127,4 @@ DELETE /api/v1/merchant/products/{productId}
 
 cURL
 curl -X DELETE http://localhost:8080/api/v1/merchant/products/1 \
--H "X-Merchant-id: MERCHANT123"
+-H "X-Merchant-id: 101"
